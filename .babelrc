@@ -1,3 +1,5 @@
 {
-	"plugins":["./plugin.js"]
+  "parserOpts": {
+    "plugins": ["./plugin.js"]
+  }
 }

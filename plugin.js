@@ -1,18 +1,11 @@
-const babelTemplate = require ('babel-template');
 const t = require ('babel-types');
-
-const template = babelTemplate(
-	`
-
-	`
-);
 
 module.exports = function () {
 	return {
 		visitor: {
 			Identifier (path) {
 				//console.log (path)
-				if (path.node.name !== '_') {
+				if (path.node.name !== 'print') {
 					return;
 				}
 
@@ -20,7 +13,7 @@ module.exports = function () {
 			},
 
 			VariableDeclaration (path) {
-				console.log (path.node);
+				// console.log (path.node);
 			}
 		}
 	}
